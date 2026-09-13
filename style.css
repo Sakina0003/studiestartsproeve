@@ -1,0 +1,150 @@
+/*************** Reset *********************/
+* {
+  margin: 0rem;
+  padding: 0rem;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/********word-breaking*****/
+main {
+  overflow-wrap: break-word;
+  hyphens: auto;
+  max-width: 1200px;
+  margin: auto;
+}
+/**************** fonts **********/
+
+/***** web font******/
+@font-face {
+  font-family: "nato-sans-regular";
+  src:
+    url("notosans-regular-webfont.woff") format("woff"),
+    url("notosans-regular-webfont.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+h3 {
+  font-family: "nato-sans-regular", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 390;
+  font-variation-settings: "wdth" 100;
+  font-style: oblique;
+}
+
+p,
+a {
+  font-family: "nato-sans-regular", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+/*****google fonts*****/
+
+h1 {
+  font-family: "Expletus Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+h2,
+.hind-regular {
+  font-family: "Hind", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+dl,
+.hind-regular {
+  font-family: "Hind", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+dt,
+.hind-regular {
+  font-family: "Hind", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*********** colors, border and more**********/
+
+h1 {
+  /**border-backgroundcolors**/
+  border-radius: 3px;
+  background-color: rgb(87, 140, 171);
+  padding: 0.5rem;
+  /***text colors and shadows***/
+  text-shadow:
+    0.1px 0.1px 1px rgb(150, 224, 255),
+    0 0 4px rgb(167, 228, 250);
+
+  color: rgb(1, 26, 40);
+}
+
+h2 {
+  /**border-backgroundcolors**/
+  background-color: rgb(96, 162, 201);
+  padding: 0.4rem;
+  border-radius: 3px;
+  /***text colors***/
+  color: rgb(6, 50, 75);
+}
+
+h3 {
+  /***text colors***/
+  color: rgb(1, 26, 40);
+}
+
+p {
+  /***text colors***/
+  color: rgb(1, 26, 40);
+  /***line and spacing***/
+  line-height: 1.4rem;
+  padding-inline: 0.5rem;
+}
+
+a {
+  /***line and spacing***/
+  line-height: 1.4rem;
+  padding-inline: 0.5rem;
+}
+
+dl {
+  /***text colors***/
+  color: rgb(1, 26, 40);
+  /***line and spacing***/
+  line-height: 1.4rem;
+  padding-inline: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.button {
+  /***text colors***/
+  color: rgb(204, 222, 228);
+  border-radius: 16px;
+  background-color: rgb(57, 102, 128);
+  padding: 0.5rem;
+  border-style: double;
+  border-color: rgb(17, 62, 89);
+}
+
+body {
+  /**border-backgroundcolors**/
+  background-color: rgba(37, 88, 117, 0.838);
+}
+
+main {
+  /**border-backgroundcolors**/
+  border-radius: 16px;
+  background-color: rgb(204, 222, 228);
+  padding: 1rem;
+}
