@@ -1,0 +1,296 @@
+/*********/
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- Desktop layout --- */
+
+/************************** min computer***************************************/
+@media (min-width: 800px) {
+  /* SECTION: grid_2-1 (text + img) */
+  .grid_2-1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+  }
+
+  .grid_2-1 img {
+    align-self: stretch;
+    object-fit: cover;
+  }
+
+  .grid_2-1 .minmac {
+    order: -1; /* img to left*/
+  }
+  .minmac {
+    margin: 20px;
+  }
+
+  .order2 {
+    margin: 20px;
+  }
+
+  .mactext1 {
+    padding-bottom: 5rem;
+  }
+}
+/********************************** index ***********************************/
+@media (min-width: 800px) {
+  /* SECTION: grid_1-1 (stats + img) */
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* two columns */
+    gap: 10px;
+    margin: 2rem;
+  }
+  .grid_2-1 {
+    margin: 2rem;
+  }
+  .grid_1-1 img {
+    align-self: stretch;
+    object-fit: cover;
+    order: -1;
+    padding-top: 0rem;
+  }
+  .button {
+    line-height: 4rem;
+  }
+  /* DL: grid_1-1 (dt over dd in two columns) */
+  dl.grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* to kolonner */
+    gap: 60px;
+    margin-left: 4rem;
+  }
+
+  dl.grid_1-1 > div {
+    display: grid;
+    grid-template-rows: auto auto; /* dt over dd */
+  }
+
+  dt {
+    font-weight: bold;
+  }
+
+  dd {
+    margin: 0;
+  }
+}
+/******Mobile****/
+dl.grid_1-1 > div {
+  display: grid;
+  grid-template-rows: auto auto;
+  margin-bottom: 0.5rem; /* dt over dd */
+}
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0;
+}
+
+dl {
+  margin-top: 1rem;
+}
+
+.button {
+  line-height: 4rem;
+}
+/************************** komponenter ****************************/
+@media (min-width: 800px) {
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    margin: 2rem;
+  }
+
+  .flex_col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    :last-child {
+      margin-top: auto;
+    }
+  }
+
+  h3 {
+    padding-top: 1rem;
+  }
+}
+/******Mobile****/
+p {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+h3 {
+  padding-top: 0.5rem;
+}
+
+img {
+  padding-top: 0.5rem;
+}
+/************************* header - menu **************************/
+/******Mobile****/
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(1, 26, 40);
+  box-shadow: 0 10px 10px rgba(3, 3, 3, 0.288);
+}
+
+.menu li {
+  margin-right: 20px;
+}
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  /***text and background colors***/
+  display: block;
+  padding: 10px;
+  color: rgb(197, 234, 255);
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: end;
+  background-color: rgb(6, 66, 101);
+  border-radius: 15px;
+  /**font***/
+  font-family: "Expletus Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.menu a:hover {
+  color: #f16500; /****når mus kommer over a tag ændre farven sig til rød***/
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  @media (width<700px) {
+    /******Desktop****/
+    display: none;
+  }
+}
+/*********************** oporativesystemer *************************/
+
+@media (min-width: 800px) {
+  .grid_5-3 {
+    display: grid;
+    grid-template-columns: 5fr 2fr; /* venstre bred, højre smal */
+    gap: 20px;
+    margin: 2rem;
+  }
+
+  .grid_2-3,
+  .grid_3-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 20px;
+  }
+
+  .grid_2-3 {
+    padding-bottom: 1rem;
+  }
+
+  img {
+    align-self: stretch;
+    object-fit: cover;
+    padding: 0rem;
+  }
+
+  .order {
+    order: -1;
+  }
+}
+/******Mobile****/
+.grid_3-2,
+.grid_2-3 {
+  padding-bottom: 1rem;
+}
+
+img {
+  padding-bottom: 1rem;
+}
+
+/****************** Galleri *********************/
+/******Mobile****/
+.grid_galleri {
+  display: grid;
+  gap: 10px;
+}
+.galleriU {
+  margin-top: 0.5rem;
+}
+/******Desktop****/
+@media (min-width: 800px) {
+  .grid_galleri {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .grid_1-1 {
+    @media (min-width: 800px) {
+      :last-child {
+        max-width: 65ch;
+      }
+    }
+  }
+  .grid_galleri img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    padding: 0rem;
+  }
+  .galleriU {
+    margin-top: 0rem;
+  }
+  /* img_1: stort 2x2 */
+  .img_1 {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  /* img_2: øverste række, 1 kolonne */
+  .img_2 {
+    grid-column: span 1;
+  }
+
+  /* img_3: øverste række, 1 kolonne */
+  .img_3 {
+    grid-column: span 1;
+  }
+
+  /* img_4: anden række, 2 kolonner */
+  .img_4 {
+    grid-column: span 2;
+  }
+
+  /* img_5: nederste række, 1 kolonne */
+  .img_5 {
+    grid-column: span 1;
+  }
+
+  /* img_6: nederste række, 3 kolonner */
+  .img_6 {
+    grid-column: span 3;
+  }
+}
